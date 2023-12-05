@@ -1,6 +1,6 @@
 ﻿namespace TabsDataShare.Models
 {
-    public class EntryTextSelection : EventArgs
+    public class EntryTextSelection
     {
         public string Text { get; set; } = string.Empty;
     }
