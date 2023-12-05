@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabsDataShare.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabsDataShare"
+    xmlns:views="clr-namespace:TabsDataShare.Views"
+    Title="TabsDataShare">
+
+    <TabBar>
+        <ShellContent 
+            Title="Entry" 
+            ContentTemplate="{DataTemplate views:EntryPage}" 
+            Route="EntryForm" />
+        <Tab Route="Results" Title="Tabs">
+            <ShellContent
+                Title="Tab1"
+                ContentTemplate="{DataTemplate views:Page1}"
+                Route="Page1" />
+            <ShellContent
+                Title="Tab2"
+                ContentTemplate="{DataTemplate views:Page2}"
+                Route="Page2" />
+        </Tab>
+    </TabBar>
+
+</Shell>

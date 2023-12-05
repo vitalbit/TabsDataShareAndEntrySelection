@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TabsDataShare.ViewModels"
+             xmlns:controls="clr-namespace:TabsDataShare.Controls"
+             x:Class="TabsDataShare.Views.Page1"
+             x:DataType="vm:Page1ViewModel"
+             Title="Page1">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding SharedData.Text}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            FontAttributes="Bold"
+            Margin="0, 0, 0, 10"/>
+        <Button Text="{Binding ButtonText}"
+                Command="{Binding ButtonClickCommand}"/>
+
+        <Label Text="Selected text" Margin="0, 10, 0, 0"/>
+        <controls:TextSelectedEntry SelectionChangedCommand="{Binding TextSelectionCommand}"/>
+        <Label Text="{Binding SelectedText}" Margin="0, 5, 0, 0"/>
+    </VerticalStackLayout>
+</ContentPage>
