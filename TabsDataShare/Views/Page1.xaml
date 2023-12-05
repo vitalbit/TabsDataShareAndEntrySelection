@@ -18,7 +18,10 @@
                 Command="{Binding ButtonClickCommand}"/>
 
         <Label Text="Selected text" Margin="0, 10, 0, 0"/>
-        <controls:TextSelectedEntry SelectionChangedCommand="{Binding TextSelectionCommand}"/>
+        <controls:TextSelectedEntry SelectionChangedCommand="{Binding TextSelectionCommand}" x:Name="selectedEntry"/>
         <Label Text="{Binding SelectedText}" Margin="0, 5, 0, 0"/>
+
+        <Label Text="{Binding Source={Reference selectedEntry}, Path=CursorPosition}" Margin="0, 10, 0, 0"/>
+        <Label Text="{Binding Source={Reference selectedEntry}, Path=SelectionLength}"/>
     </VerticalStackLayout>
 </ContentPage>
